@@ -1,0 +1,13 @@
+# Minimal extras for Google Colab (numpy/pandas/scipy/sklearn/matplotlib/torch are preinstalled there).
+# Version ranges, not exact pins: after your first successful run execute scripts/freeze_env.sh
+# and commit requirements.lock.txt for exact reproducibility.
+anndata>=0.10
+scanpy>=1.10
+gseapy>=1.1
+statsmodels>=0.14
+pyarrow>=14
+pyyaml
+psutil
+umap-learn
+igraph
+leidenalg

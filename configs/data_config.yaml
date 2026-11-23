@@ -1,0 +1,56 @@
+# File names / record IDs follow the scPerturb Zenodo collection (record 7041849).
+# VERIFY file names against https://zenodo.org/records/7041849 before first download.
+datasets:
+  replogle_k562_essential:
+    description: "Replogle et al. 2022, K562 CRISPRi, essential-gene screen"
+    scperturb_file: ReplogleWeissman2022_K562_essential.h5ad
+    zenodo_record: "7041849"
+    pertpy_loader: replogle_2022_k562_essential
+    perturbation_col: perturbation
+    control_label: control
+    batch_col: gem_group
+    modality: CRISPRi
+  replogle_rpe1:
+    description: "Replogle et al. 2022, RPE1 CRISPRi, essential-gene screen"
+    scperturb_file: ReplogleWeissman2022_rpe1.h5ad
+    zenodo_record: "7041849"
+    pertpy_loader: replogle_2022_rpe1
+    perturbation_col: perturbation
+    control_label: control
+    batch_col: gem_group
+    modality: CRISPRi
+  norman2019:
+    description: "Norman et al. 2019, K562 CRISPRa, single and double perturbations"
+    scperturb_file: NormanWeissman2019_filtered.h5ad
+    zenodo_record: "7041849"
+    pertpy_loader: norman_2019
+    perturbation_col: perturbation
+    control_label: control
+    batch_col: gem_group
+    modality: CRISPRa
+    combo_separator: "_"
+  adamson2016:
+    description: "Adamson et al. 2016, K562 CRISPRi UPR Perturb-seq"
+    scperturb_file: AdamsonWeissman2016_GSM2406681_10X010.h5ad
+    zenodo_record: "7041849"
+    pertpy_loader: adamson_2016_upr_perturb_seq
+    perturbation_col: perturbation
+    control_label: control
+    batch_col: gem_group
+    modality: CRISPRi
+
+# Development subset (Colab-friendly). Increase after the pipeline is validated.
+subset:
+  n_perturbations: 300
+  min_cells_per_perturbation: 50
+  max_control_cells: 8000
+  max_cells_per_perturbation: 300
+  n_hvg: 2000
+qc:
+  min_genes_per_cell: 200
+  min_cells_per_gene: 10
+  max_pct_mito: 20.0
+  min_knockdown: 0.30      # fraction of target-gene reduction required to keep a perturbation
+  min_target_expression: 0.05  # mean normalized expression needed to assess knockdown
+  keep_unassessable: false
+seed: 0

@@ -1,0 +1,19 @@
+# data & models never go to GitHub
+data/
+PerturbAI_data/
+*.h5ad
+*.h5
+*.parquet
+*.pt
+*.joblib
+*.zip
+*.part
+scratch/
+# python
+__pycache__/
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+.env
+# secrets
+*.token

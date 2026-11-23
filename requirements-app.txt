@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+scikit-learn
+pyarrow
+pyyaml
+psutil
+requests
+matplotlib
+seaborn
+joblib
+streamlit
+fastapi
+uvicorn
+# add torch (CPU wheel) only if the saved best model is the MLP: pip install torch --index-url https://download.pytorch.org/whl/cpu

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perturbai"
+version = "0.1.0"
+description = "ML prediction of CRISPR perturbation responses and candidate target prioritisation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "pyyaml", "psutil", "requests", "matplotlib", "seaborn", "pyarrow"]
+
+[project.optional-dependencies]
+sc = ["anndata", "scanpy", "gseapy", "statsmodels", "umap-learn", "igraph", "leidenalg"]
+dl = ["torch"]
+app = ["streamlit", "fastapi", "uvicorn", "joblib"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

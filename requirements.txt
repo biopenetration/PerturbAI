@@ -1,0 +1,24 @@
+# Full local environment (pip). Alternative: conda env create -f environment.yml
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+pyarrow
+pyyaml
+psutil
+requests
+anndata>=0.10
+scanpy>=1.10
+gseapy>=1.1
+statsmodels>=0.14
+umap-learn
+igraph
+leidenalg
+torch
+joblib
+pytest
+jupyter
+# Optional: pertpy (dataset fallback loader), streamlit/fastapi/uvicorn (see requirements-app.txt)
+# GEARS (heavy; separate fresh env): torch_geometric cell-gears
